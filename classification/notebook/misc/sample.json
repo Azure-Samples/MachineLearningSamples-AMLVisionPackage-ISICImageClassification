@@ -1,0 +1,20 @@
+{
+	"bowl": [
+					"plastic bowl",
+					"../imgs_recycling/bowl"
+	],
+	"cup": [
+					"plastic cup",
+					"../imgs_recycling/cup",
+					"http://cdnimg2.webstaurantstore.com/images/products/main/123662/268841/dart-solo-ultra-clear-conex-tp12-12-oz-pet-plastic-cold-cup-1000-case.jpg"
+	],
+	"cutlery": [
+					"plastic cutlery",
+					"../imgs_recycling/cutlery",
+					"http://img4.foodservicewarehouse.com/Prd/1900SQ/Fineline_2514-BO.jpg"
+	],
+	"plate": [
+					"plastic plate",
+					"../imgs_recycling/plate"
+	]
+}
