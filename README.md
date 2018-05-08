@@ -2,7 +2,7 @@
 
 Many applications in the computer vision domain can be framed as image classification. These include building models that answer questions such as "Is an OBJECT present in the image?" (OBJECT could be *dog*, *car*, or *ship*) as well as more complex questions such as "What class of eye disease severity is evinced by this patient's retinal scan?"
 
-This document shows how the Azure Machine Learning Package for Computer Vision (AMLPCV) can be used to train, test, and deploy an **image classification** model. Currently, [CNTK](https://www.microsoft.com/en-us/cognitive-toolkit/) is used as the deep learning framework, training is performed locally on a GPU powered machine such as the ([Data Science VM](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/microsoft-ads.dsvm-deep-learning?tab=Overview), and deployment uses the Azure ML Operationalization CLI.
+This document shows how the Azure Machine Learning Package for Computer Vision (AMLPCV) can be used to train, test, and deploy an **image classification** model. Currently, [CNTK](https://www.microsoft.com/en-us/cognitive-toolkit/) is used as the deep learning framework, training is performed locally on a GPU powered machine such as [Data Science VM](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/microsoft-ads.dsvm-deep-learning?tab=Overview). Deployment uses the Azure ML Operationalization CLI.
 
 In this tutorial, the following steps are performed:
 
@@ -27,7 +27,7 @@ Those substeps are further explained in the corresponding Jupyter Notebook. We a
 
 This step operationalizes the model produced from the modeling step. It introduces the operationalization prerequisites and setup. Finally, the consumption of the web service is also explained. Through this tutorial, you can learn to build deep learning models with AMLPCV and operationalize the model in Azure.
 
-### References
+#### References
 
 [Azure Machine Learning Package for Computer Vision (AMLPCV)](https://docs.microsoft.com/en-us/python/api/overview/azure-machine-learning/computer-vision?view=azure-python)
 
