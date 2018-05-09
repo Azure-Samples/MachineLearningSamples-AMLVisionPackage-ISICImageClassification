@@ -1,6 +1,6 @@
 # Azure Machine Learning for Computer Vision
 
-Many applications in the computer vision domain can be framed as image classification. These include building models that answer questions such as "Is an OBJECT present in the image?" (OBJECT could be *dog*, *car*, or *ship*) as well as more complex questions such as "What class of eye disease severity is evinced by this patient's retinal scan?"
+Many applications in the computer vision domain can be framed as image classification problems. These include building models that answer questions such as "Is an OBJECT present in the image?" (OBJECT could be *dog*, *car*, or *ship*) and more complex questions such as "What class of eye disease severity is evinced by this patient's retinal scan?"
 
 This document shows how the Azure Machine Learning Package for Computer Vision (AMLPCV) can be used to train, test, and deploy an **image classification** model. Currently, [CNTK](https://www.microsoft.com/en-us/cognitive-toolkit/) is used as the deep learning framework, training is performed locally on a GPU powered machine such as [Data Science VM](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/microsoft-ads.dsvm-deep-learning?tab=Overview). Deployment uses the Azure ML Operationalization CLI.
 
@@ -8,20 +8,31 @@ In this tutorial, the following steps are performed:
 
 1. [Data acquision](code/01\_data\_acquisition\_and\_understanding/data\_acquisition.ipynb)
 
-We choose ISIC dataset for the image classification task. ISIC (The International Skin Imaging Collaboration) is a partership between academia and industry to facilitate the application of digital skin imaging to study and help reduce melanoma mortality. The [ISIC archive](https://isic-archive.com/#images) contains over 13,000 skin lesion images with labels either benign or malignant. We download a sample of the images from ISIC archive.
+ISIC dataset is used for the image classification task. ISIC (The International Skin Imaging Collaboration) is a partership between academia and industry to facilitate the application of digital skin imaging to study and help reduce melanoma mortality. The [ISIC archive](https://isic-archive.com/#images) contains over 13,000 skin lesion images with labels either benign or malignant. We download a sample of the images from ISIC archive.
 
 2. [Modeling](code/02_modeling/modeling.ipynb)
 
-Within modeling step, the following substeps are performed. 
+In modeling step, the following substeps are performed. 
 
 * Dataset Creation
-* Image Visualization and annotation
-* Image Augmentation
-* DNN Model Definition
-* Classifier Training
-* Evaluation and Visualization
+In order to generate a Dataset object in AMLPCV, provide a root directory of images on the local disk.
 
-Those substeps are further explained in the corresponding Jupyter Notebook. We also provided guidelines for turning the parameters such as learning rate, mini batch size, and dropout rate to further improve the model performance.
+* Image Visualization and annotation
+Visualize the images in the dataset object, and correct some of the labels if necessary.
+
+* Image Augmentation
+Augment a dataset object using the transformations described in the [imgaug](https://github.com/aleju/imgaug) library.
+
+* DNN Model Definition
+Define the model architecture used in the training step. Six different per-trained deep neural network models are supported in AMLPCV: AlexNet, Resnet-18, Resnet-34, and Resnet-50, Resnet-101, and Resnet-152.
+
+* Classifier Training
+Train the neural networks
+
+* Evaluation and Visualization
+The evaluation module provides functionality to evaluate the performance of the trained model on an independent test dataset. The evaluation metrics include accuracy, precision and recall, and ROC curve.
+
+Those substeps are explained in detail in the corresponding Jupyter Notebook. We also provided guidelines for turning the parameters such as learning rate, mini batch size, and dropout rate to further improve the model performance.
 
 3. [Deployment](code/03\_deployment/deployment.ipynb)
 
