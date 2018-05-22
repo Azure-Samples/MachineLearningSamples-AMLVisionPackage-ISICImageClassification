@@ -37,17 +37,12 @@ The image classification task uses skin images from the International Skin Imagi
 
 In modeling step, the following substeps are performed. 
 
-<b>2.1 Dataset Creation</b><br>
-
-<b>2.2 Image Visualization and annotation</b><br>
-
-<b>2.3 Image Augmentation</b><br>
-
-<b>2.4 DNN Model Definition</b><br>
-
-<b>2.5 Classifier Training</b><br>
-
-<b>2.6 Evaluation and Visualization</b><br>
+ * Dataset Creation
+ * Image Visualization and annotation
+ * Image Augmentation
+ * DNN Model Definition
+ * Classifier Training
+ * Evaluation and Visualization
 
 The substep provides functionality to evaluate the performance of the trained model on an independent test dataset. The evaluation metrics include accuracy, precision and recall, and ROC curve.
 
