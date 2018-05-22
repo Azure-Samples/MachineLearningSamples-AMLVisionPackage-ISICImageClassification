@@ -1,21 +1,3 @@
----
-title: Image Classification with Azure Machine Learning (AML) Package for Computer Vision (AMLPCV) and Team Data Science Process (TDSP) | Microsoft Docs
-description: Describes use of TDSP (Team Data Science Process) and AMLPCV for image classification
-services: machine-learning, team-data-science-process
-documentationcenter: ''
-author: xibingao
-manager: deguhath
-editor: cgronlun
-
-ms.assetid: b8fbef77-3e80-4911-8e84-23dbf42c9bee
-ms.service: machine-learning
-ms.workload: data-services
-ms.tgt_pltfrm: na
-ms.devlang: na
-ms.topic: article
-ms.date: 18/05/2018
-ms.author: xibingao
----
 # Skin Cancer Image Classification with Azure Machine Learning (AML) package for Computer Vision (AMLPCV) and Team Data Science Process (TDSP)
 
 ## Introduction
@@ -23,9 +5,6 @@ ms.author: xibingao
 This article shows how to use the [Azure Machine Learning Package for Computer Vision (AMLPCV)](https://docs.microsoft.com/en-us/python/api/overview/azure-machine-learning/computer-vision?view=azure-ml-py-latest) to train, test, and deploy an **image classification** model. The sample uses the TDSP structure and templates in [Azure Machine Learning Workbench](https://docs.microsoft.com/en-us/azure/machine-learning/service/quickstart-installation). The complete sample is provided in this walkthrough. It uses [CNTK](https://www.microsoft.com/en-us/cognitive-toolkit/) as the deep learning framework, and training is performed on a [Data Science VM](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/microsoft-ads.dsvm-deep-learning?tab=Overview) GPU machine. Deployment uses the Azure ML Operationalization CLI.
 
 Many applications in the computer vision domain can be framed as image classification problems. These include building models that answer questions such as "Is an object present in the image?" (object could be *dog*, *car*, or *ship*) and more complex questions such as "What class of eye disease severity is evinced by this patient's retinal scan?" AMLPCV streamlines image classification data processing and modeling pipeline. 
-
-## Link to GitHub repository
-We provide summary documentation here about the sample. More extensive documentation can be found on the [GitHub site](https://github.com/Azure/MachineLearningSamples-AMLVisionPackage-ISICImageClassification).
 
 ## Team Data Science Process (TDSP) Walkthrough with AMLPCV
 
